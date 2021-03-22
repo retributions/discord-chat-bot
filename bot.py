@@ -13,7 +13,7 @@ async def on_message(message):
         if r.status_code == 200:
             em = discord.Embed(
                 description=r.json()['response'],
-                color=random.randint(0, 0xFFFFFF)
+                color=random.randint(0, 0xFFFFFF) #random colors 
             )
             await message.channel.send(embed=em)
         elif r.status_code == 400:

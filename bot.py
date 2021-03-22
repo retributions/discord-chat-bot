@@ -4,6 +4,7 @@ import requests
 
 client = discord.Client()
 
+BOT_TOKEN = ""
 
 @client.event
 async def on_message(message):
@@ -18,4 +19,4 @@ async def on_message(message):
         elif r.status_code == 400:
             await message.channel.send("Hmm seems like the api is down")
 
-client.run("ODAwMTI0MzIwMDg4MTk1MDky.YANj1w.LLXS5f6k-uJQwpTOcNVVURxDsvw", reconnect=True)
+client.run(str(BOT_TOKEN), reconnect=True)
